@@ -4,14 +4,19 @@ import styled from 'styled-components';
 /* Components ---------------------------*/
 import Essays from './Essays.jsx';
 
+import Template from '../../Shared/Template.jsx';
+
 const Homework = () => {
 
     // ... functional component logic
 
     return (
         <HomeworkStyled>
-        <h2>Homework</h2>
-        <Essays essays={ essays } />
+        <Template
+            title = 'Homework'
+            aside = { false } >
+                <Essays essays={ essays } />
+            </Template>
         </HomeworkStyled>
     )
 }

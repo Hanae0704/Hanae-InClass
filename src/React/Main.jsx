@@ -1,14 +1,26 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 /* Components ---------------------------*/
-import Homework from './Homework/Homework.jsx';
+import Content from './Shared/Content.jsx';
+import Header from './Shared/Header.jsx';
+import Footer from './Shared/Footer.jsx';
+import Nav from './Shared/Nav.jsx';
+
 
 const Main = () => {
 
     return (
         <div className='Main'>
+            <BrowserRouter>
             <h1>In Class</h1>
-            <Homework/>
+
+            <Nav/>
+            <Header/>
+            <Content/>
+            <Footer/>
+
+            </BrowserRouter>
         </div>
     );
 }

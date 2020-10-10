@@ -18,7 +18,7 @@ const Essay = (props) => {
     return (
     <EssayStyled>
     <h3>{ title }</h3>
-    <div className="questions">{ question }</div>
+    <div className="questions"><b>{ question }</b></div>
     <AnswerComponent/>
     </EssayStyled>
 

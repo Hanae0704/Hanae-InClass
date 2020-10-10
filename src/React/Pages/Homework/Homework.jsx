@@ -34,7 +34,7 @@ background-color: #ccc;
 const essays = [
     {
         title: '01',
-        question: 'Question 1 goes here.',
+        question: 'What are Single Page Apps (SPAs)? How do they differ from traditional multi-page Web Sites?',
         AnswerComponent: () => {
             return (
             <div>
@@ -46,12 +46,25 @@ const essays = [
     },
     {
         title: '02',
-        question: 'Question 2 goes here.',
+        question: 'In React, what does Prop Drillng mean? Why do they say that React has a Unidirectional Data Flow? What are the pros and cons of this feature?',
         AnswerComponent: () => {
             return (
             <div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, animi! Voluptatum reiciendis minus, vitae modi vero libero accusamus quisquam quae quaerat animi non facere quo fugiat. Explicabo debitis asperiores doloremque.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam consequatur alias impedit ab illo dolores corrupti debitis explicabo? Nam, nisi quidem inventore quam molestiae corporis est illum perspiciatis ut adipisci?</p>
+            <p>Prop Drilling means in React is the process of getting data to parts of the React Component tree.</p>
+            <p>Unidirectional data flow means that the parents component passes the state information down to its child components. The concept of this is that data has one way to be transferred to other parts of application. </p>
+            <p>Pros of the unidirectional data flow is that it has less error because I have more control over my data and is easier to debug because I know what is coming from where. </p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '03',
+        question: 'In React, what is Redux? Why do we need Redux? Is Redux the only option?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>..</p>
+            <p>..</p>
             </div>
             )
         }

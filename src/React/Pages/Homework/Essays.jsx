@@ -22,7 +22,7 @@ export default Essays;
 
 const EssaysStyled = styled.div`
 
-border: solid 5px purple;
+border: solid 3px black;
 padding: 20px;
 background-color: #eee;
 

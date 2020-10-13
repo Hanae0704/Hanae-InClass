@@ -25,7 +25,7 @@ export default Homework;
 
 const HomeworkStyled = styled.div`
 
-border: dashed 5px teal;
+/* border: dashed 3px blue; */
 padding: 20px;
 background-color: #ccc;
 

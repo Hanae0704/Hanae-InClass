@@ -37,7 +37,7 @@ export default Essay;
 
 const EssayStyled = styled.div`
 
-border: solid 1px red;
+border: solid 1px gray;
 padding: 20px;
 margin: 20px 0px;
 

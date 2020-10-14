@@ -6,15 +6,14 @@ import { useSelector } from 'react-redux';
 
 const Aside = () => {
 
-    const auction = useSelector((state) => state);
-
-    console.log('auction', auction);
+    const {auction} = useSelector((state) => state);
 
     return (
         <AsideStyled className='Aside'>
-            <img src={`/assets/img/auctions/${auction.id}/auction.jpg`} 
+            <img 
+            src={`/assets/img/auctions/${auction.id}/auction.jpg`} 
             alt={auction.title}/>
-            
+
             <h2>{auction.title}</h2>
         </AsideStyled>
     );

@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 /* Component ---------------------------*/
 import Home from '../Pages/Home.jsx';
-import Auction from '../Pages/Auction.jsx';
+import Auction from '../Pages/Auction/Auction.jsx';
 import Login from '../Pages/Login.jsx';
 import Contact from '../Pages/Contact.jsx';
 import Homework from '../Pages/Homework/Homework.jsx';

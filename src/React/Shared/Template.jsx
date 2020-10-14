@@ -6,13 +6,11 @@ import Aside from './Aside.jsx';
 import Article from './Article.jsx';
 
 
-const Template = ({title, children, aside=true, auction}) => {
-
-    console.log('Template Auction', auction);
+const Template = ({title, children, aside=true}) => {
     
     return (
         <TemplateStyled className='Template'>
-            { aside && <Aside auction={auction}/>}
+            { aside && <Aside/>}
             <Article>
                 <h1>{title}</h1>
                 <div className="content">

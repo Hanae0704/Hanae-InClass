@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-/* Data ---------------------------*/
-import auction from '../common/static_data/auction.js';
-
 /* Components ---------------------------*/
 import Content from './Shared/Content.jsx';
 import Header from './Shared/Header.jsx';
@@ -14,15 +11,13 @@ import Nav from './Shared/Nav.jsx';
 
 const Main = () => {
 
-    console.log('Main Auction', auction);
-
     return (
         <MainStyled className='Main'>
             <BrowserRouter>
             
             <Header/>
             <Nav/>
-            <Content auction={auction}/>
+            <Content/>
             <Footer/>
 
             </BrowserRouter>

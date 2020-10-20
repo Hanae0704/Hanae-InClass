@@ -91,7 +91,7 @@ const essays = [
             return (
             <div>
             <p>In Redux, mutating state means the process of changing the value of a variable or an object, which means is to mutate the state. </p>
-            <p>.If a Redux reducer directly mutates, and returns, the state object passed into it, the values of the root state object will change, but the object itself will not.</p>
+            <p>If a Redux reducer directly mutates, and returns, the state object passed into it, the values of the root state object will change, but the object itself will not.</p>
             <p>We would like to avoid this is because reducers in redux are pure functions, which means they have no side effects. If you mutate the state, those functions are no longer pure, which causes bugs or errors. </p>
             </div>
             )

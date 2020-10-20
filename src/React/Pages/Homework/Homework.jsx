@@ -71,5 +71,31 @@ const essays = [
             )
         }
     },
+    {
+        title: '04',
+        question: 'What is middleware? What does the Thunk Middleware do for Redux?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Middleware is software which is in the middle of an operating system and the applications, and allows them to communicate with each other. </p>
+            <p>Redux Thunk middleware allows you to write action creators that return a function instead of an action. Thunk middleware is the way to extend Redux with custom functionality.</p>
+            <p>However, the thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '05',
+        question: 'In Redux, what does mutating state mean? Why is this something we would like to avoid?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>In Redux, mutating state means the process of changing the value of a variable or an object, which means is to mutate the state. </p>
+            <p>.If a Redux reducer directly mutates, and returns, the state object passed into it, the values of the root state object will change, but the object itself will not.</p>
+            <p>We would like to avoid this is because reducers in redux are pure functions, which means they have no side effects. If you mutate the state, those functions are no longer pure, which causes bugs or errors. </p>
+            </div>
+            )
+        }
+    },
 ]
 

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addLotToBids, removeLotToBids } from 'Redux/bidManager/actions.js';
 
 /* Component ---------------------------*/
-import Button from 'React/Shared/Controls/Button.jsx';
+import Button from 'React/Shared/UniversalForm/Controls/Button.jsx';
 
 const AddRemoveLot = ({lot}) => {
 

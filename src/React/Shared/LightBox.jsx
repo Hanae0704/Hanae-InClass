@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import keycode from 'keycode';
 
 /* Component ---------------------------*/
-import Button from 'React/Shared/Controls/Button.jsx';
+import Button from 'React/Shared/UniversalForm/Controls/Button.jsx';
 
 const LightBox = ({children, isOpen, onClose, headerText}) => {
 
@@ -13,7 +13,7 @@ const LightBox = ({children, isOpen, onClose, headerText}) => {
             switch(keycode(event)) {
                 case 'esc':
                     event.stopPropagation();
-                    handleOnClose();
+                    onClose();
                     break;
 
                     default:
@@ -26,7 +26,7 @@ const LightBox = ({children, isOpen, onClose, headerText}) => {
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         }
-    }, []);
+    }, [onClose]);
 
     const handleOnClose = () => {
         onClose();

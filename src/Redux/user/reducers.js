@@ -1,7 +1,8 @@
 import { ActionTypes } from './actionTypes.js';
 
 const defaultState = {
-    bids: [],
+    isLoggedIn: false,
+    profile: {},
 }
 
 const userReducer = (state = defaultState, action) => {

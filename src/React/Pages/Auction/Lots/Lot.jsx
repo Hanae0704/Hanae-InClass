@@ -7,6 +7,7 @@ import LightBox from 'React/Shared/LightBox.jsx';
 
 const Lot = ({lot, auctionID}) => {
 
+
     const [isOpen, isOpenUpdate] = useState(false);
 
     const handleOnOpen = () => {
@@ -30,9 +31,10 @@ const Lot = ({lot, auctionID}) => {
             <AddRemoveLot lot={ lot }/>
 
             <LightBox
-            isOpen = { isOpen } 
-            onClose={ handleOnClose }
-            headerText={ `Lot# ${lot.number}: ${lot.title}` }>
+                isOpen = { isOpen } 
+                onClose={ handleOnClose }
+                headerText={ `Lot# ${lot.number}: ${lot.title}` }
+            >
             
             <img src={`/assets/img/auctions/${auctionID}/lots/small/${lot.images.small}`} alt={lot.title}/>
             <h3>{ `Lot: ${lot.number}: ${lot.title}` }</h3>

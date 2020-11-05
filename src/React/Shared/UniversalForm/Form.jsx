@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 /* Context ---------------------------*/
 import Context from './context/index.js';
-import * as UFAction from './context/action.js';
+import * as UFActions from './context/action.js';
 
 const Form = ({children}) => {
 
@@ -12,7 +12,7 @@ const Form = ({children}) => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        UFAction.handleOnSubmit(state, dispatch);
+        UFActions.handleOnSubmit(state, dispatch);
     }
 
     return (

@@ -23,7 +23,7 @@ const UniversalForm = ({
 
     const initialState = {
         formData: formData,
-        formStatusL: 'pending',
+        formStatus: 'pending',
         feedbackMessage: 'no message',
         submitText: submitText,
         apiEndpoint: apiEndpoint,

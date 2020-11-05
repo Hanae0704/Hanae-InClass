@@ -25,9 +25,7 @@ export default Homework;
 
 const HomeworkStyled = styled.div`
 
-/* border: dashed 3px blue; */
 padding: 20px;
-background-color: #ccc;
 
 `;
 
@@ -97,5 +95,66 @@ const essays = [
             )
         }
     },
+    {
+        title: '06',
+        question: 'What are the ingredients of a code review in Web Development?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Code review in web development is fellow programmers to check each other's code for mistakes.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '07',
+        question: 'What is the difference between Action Types, Action Creators and Reducers?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Action Type is how the action to be performed which is the reducer responds to, and dispatch these from action creators to change the state of your store.</p>
+            <p>Action Creator is a function that returns an action object. </p>
+            <p>Reducer is a function that determines changes to an application's state.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '08',
+        question: 'What does the spread operator do in JavaScript? How does this help Redux reducers keep the state from mutating?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>The spread operator makes shallow copies of JS objects. Using this operator makes the code concise and enhances its readability.</p>
+            <p>The spread operator helps Redux reducers because it creates copies of objects with new or updated values.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '09',
+        question: 'What are some of the challenges of loading Redux state from a webserver and some of the solutions.',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>The challenges of loading Redux state from a webserver is that content cannot be shown until it's loaded.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '10',
+        question: 'In JavaScript, what is the difference between const, let and var?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>const variables cannot be updated or cannot be redeclared.</p>
+            <p>let variables are made to be updated, but cannot be redeclared like const.</p>
+            <p>var variables can be updated and redeclared within its scope.</p>
+            </div>
+            )
+        }
+    },
+    
 ]
 

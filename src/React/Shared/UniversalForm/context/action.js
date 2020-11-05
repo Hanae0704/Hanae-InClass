@@ -51,7 +51,7 @@ export const handleOnSubmit = (state, dispatch) => {
     // validate from data
     let errors = false;
     formData.forEach((field) => {
-        if (field.value.length < 1) {
+        if (field.required && field.value.length < 1) {
             errors = true;
             dispatch(feedbackMessageUpdate(`The ${field.id} is required.`));
         }

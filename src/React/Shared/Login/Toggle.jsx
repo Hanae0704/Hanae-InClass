@@ -4,11 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import { useSelector } from 'react-redux';
 
 /* Component ---------------------------*/
 import Button from '../UniversalForm/Controls/Button.jsx';
 
 const Toggle = ({onClick}) => {
+
+    const { user } = useSelector((state) => state);
+
+    const color = (user.isLoggedIn) ? 'red':'orange';
 
     return (
         <ToggleStyled className='Toggle'>
@@ -17,7 +22,7 @@ const Toggle = ({onClick}) => {
                 onClick={ onClick }
                 unstyled={ true }
             >
-                <FontAwesomeIcon icon={ faUserCircle } color='red'/>
+                <FontAwesomeIcon icon={ faUserCircle } color={ color }/>
             </Button>
         </ToggleStyled>
     );

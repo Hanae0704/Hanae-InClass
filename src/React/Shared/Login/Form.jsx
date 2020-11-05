@@ -1,5 +1,5 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 /* Scripts ---------------------------*/
@@ -14,7 +14,7 @@ const Form = () => {
 
     const defaultData = [
         { id: 'username', value: '', required: true, label: 'Username', type: 'text', },
-        { id: 'password', value: '', required: true, label: 'Password', type: 'text', },
+        { id: 'password', value: '', required: true, label: 'Password', type: 'password', },
 
     ];
 
@@ -35,7 +35,7 @@ const Form = () => {
             formData={ defaultData } 
             submitText='Log In'
             apiEndpoint='/login/validate'
-            onSUbmit={ handleOnSubmit }
+            onSubmit={ handleOnSubmit }
         />
         </FormStyled>
     );

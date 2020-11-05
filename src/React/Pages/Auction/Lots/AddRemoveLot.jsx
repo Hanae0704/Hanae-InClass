@@ -12,9 +12,7 @@ const AddRemoveLot = ({lot}) => {
 
     const dispatch = useDispatch();
 
-    const { bidManager: { bids } } = useSelector((state) => state);
-
-    console.log('AddRemoveLot bids', bids);
+    const { bidManager: { bids }, user } = useSelector((state) => state);
 
     const isInBids = bids.find((bid) => {
         return bid.lot.id === lot.id;
@@ -31,6 +29,8 @@ const AddRemoveLot = ({lot}) => {
         console.log('Remove Lot');
         dispatch(removeLotToBids(lot));
     }
+
+    if (!user.isLoggedIn) { return ''; }
 
     return (
         <AddRemoveLotStyled className='AddRemoveLot'>

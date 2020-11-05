@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 /* Context ---------------------------*/
 import Context from './context/index.js';
-import * as UFAction from './context/action.js';
+import * as UFActions from './context/action.js';
 
 /* Components ---------------------------*/
 import Button from 'React/Shared/UniversalForm/Controls/Button.jsx';
@@ -18,7 +18,7 @@ const Feedback = () => {
     } = state;
 
     const handleClose = () => {
-        dispatch(UFAction.statusUpdate('pending'));
+        dispatch(UFActions.statusUpdate('pending'));
     }
 
 

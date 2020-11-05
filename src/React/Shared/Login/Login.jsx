@@ -1,4 +1,5 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import keycode from 'keycode';
 
@@ -16,6 +17,8 @@ const Login = () => {
     /*---------------------------
     | State and Props
     ---------------------------*/
+
+    const { user } = useSelector((state) => state);
 
     const [ showForm, showFormUpdate ] = useState(false);
 
@@ -69,8 +72,12 @@ const Login = () => {
             {
                 showForm &&
                 <div className="bottom" ref={ bottomRef }>
-                    <LogOut/>
-                    <Form/>
+
+                    {
+                        user.isLoggedIn
+                        ? <LogOut/>
+                        : <Form/>
+                    }
                 </div>
             }
         </LoginStyled>

@@ -3,8 +3,20 @@ import styled from 'styled-components';
 
 /* Component ---------------------------*/
 import Input from '../Controls/Input.jsx';
+import Textarea from '../Controls/Textarea.jsx';
 
 const LabelInput = ({formField}) => {
+
+    let ControlComponent;
+
+    switch (formField.type) {
+        case 'textarea':
+            ControlComponent = Textarea;
+            break;
+        default:
+            ControlComponent = Input;
+            break;
+    }
 
     return (
         <LabelInputStyled className='LabelInput'>

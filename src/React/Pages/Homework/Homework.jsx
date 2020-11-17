@@ -155,6 +155,18 @@ const essays = [
             )
         }
     },
+    {
+        title: '11',
+        question: 'What does JavaScript Destructuring do?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>JavaScript destructuring remove properties from objects and bind them to variables.</p>
+            <p>This can also remove multiple properties in one statement.</p>
+            </div>
+            )
+        }
+    },
     
 ]
 

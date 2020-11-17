@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
+import _ from 'lodash';
+
+/* Scripts ---------------------------*/
+import * as AuctionActions from 'Redux/auction/actions.js';
 
 /* Components ---------------------------*/
 import Content from './Shared/Content.jsx';
@@ -11,18 +16,26 @@ import Nav from './Shared/Nav.jsx';
 
 const Main = () => {
 
-    return (
-        <MainStyled className='Main'>
-            <BrowserRouter>
-            
-            <Header/>
-            <Nav/>
-            <Content/>
-            <Footer/>
+    const dispatch = useDispatch();
 
-            </BrowserRouter>
-        </MainStyled>
-    );
+    useEffect (() => {
+        dispatch(AuctionActions.loadAuctions());
+    }, [dispatch]);
+
+    return 'hello';
+
+    // return (
+    //     <MainStyled className='Main'>
+    //         <BrowserRouter>
+            
+    //         <Header/>
+    //         <Nav/>
+    //         <Content/>
+    //         <Footer/>
+
+    //         </BrowserRouter>
+    //     </MainStyled>
+    // );
 }
 
 export default Main;

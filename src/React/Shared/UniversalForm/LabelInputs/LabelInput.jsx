@@ -15,7 +15,7 @@ const LabelInput = ({formField}) => {
             break;
         default:
             ControlComponent = Input;
-            break;
+            break
     }
 
     return (
@@ -25,7 +25,7 @@ const LabelInput = ({formField}) => {
             </div>
 
             <div className="control">
-                <Input formField={formField} />
+                <ControlComponent formField={formField} />
             </div>
         </LabelInputStyled>
     );
@@ -34,6 +34,7 @@ const LabelInput = ({formField}) => {
 export default LabelInput;
 
 const LabelInputStyled = styled.div`
+
     display: flex;
 
     .label-container {
@@ -42,12 +43,10 @@ const LabelInputStyled = styled.div`
         padding: 10px;
         border: dashed 1px #eee;
     }
-
     label {
         font-size: 16px;
         font-weight: bold;
     }
-    
     .control {
         flex: 0 0 60%;
         padding: 10px;

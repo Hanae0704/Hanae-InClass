@@ -23,7 +23,7 @@ const Contact = () => {
             <UniversalForm 
                 formData={ defaultData } 
                 submitText='Email Us'
-                apiEndpoint='/login/validate'
+                apiEndpoint='/email/send'
                 onSubmit={ handleOnSubmit }
             />
             </Template>

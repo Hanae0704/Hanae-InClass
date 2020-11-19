@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 /* Scripts ---------------------------*/
@@ -13,18 +13,21 @@ const Form = () => {
     const dispatch = useDispatch();
 
     const defaultData = [
-        { id: 'username', value: '', required: true, label: 'Username', type: 'text', },
+        { id: 'email', value: '', required: true, label: 'Email', type: 'text', },
         { id: 'password', value: '', required: true, label: 'Password', type: 'password', },
 
     ];
 
         const handleOnSubmit = (apiResponse) => {
-            console.log('Login Form', apiResponse);
+            console.log('Login Form: Server Response', apiResponse);
 
-        if (!apiResponse.errors) {
+        if (apiResponse.success) {
             const isLoggedIn = true;
-            const profile = apiResponse.profile;
+            const profile = apiResponse.payload.user;
             dispatch(UserActions.userAuthUpdate(isLoggedIn, profile));
+        }
+        else {
+            console.log('We could not find the user');
         }
     }
     
@@ -34,7 +37,7 @@ const Form = () => {
             <UniversalForm 
             formData={ defaultData } 
             submitText='Log In'
-            apiEndpoint='/login/validate'
+            apiEndpoint='/users/login'
             onSubmit={ handleOnSubmit }
         />
         </FormStyled>

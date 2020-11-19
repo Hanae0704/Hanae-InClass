@@ -1,4 +1,3 @@
-import auction from '../../common/static_data/auction.js';
 import { ActionTypes } from './actionTypes.js';
 
 const defalutState = {
@@ -9,9 +8,10 @@ const auctionReducer = (state = defalutState, action) => {
 
     switch(action.type) {
         case ActionTypes.BM_AUCTIONS_CURRENT_SET:
+
             return {
                 ...state,
-                current: auction.current,
+                current: action.current,
             };
         default:
         return state;

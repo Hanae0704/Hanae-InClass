@@ -18,24 +18,27 @@ const Main = () => {
 
     const dispatch = useDispatch();
 
+    const { auction } = useSelector((state) => state);
+
     useEffect (() => {
         dispatch(AuctionActions.loadAuctions());
     }, [dispatch]);
 
-    return 'hello';
 
-    // return (
-    //     <MainStyled className='Main'>
-    //         <BrowserRouter>
+    if (_.isEmpty(auction.current)) { return 'Preloading...'; }
+
+    return (
+        <MainStyled className='Main'>
+            <BrowserRouter>
             
-    //         <Header/>
-    //         <Nav/>
-    //         <Content/>
-    //         <Footer/>
+            <Header/>
+            <Nav/>
+            <Content/>
+            <Footer/>
 
-    //         </BrowserRouter>
-    //     </MainStyled>
-    // );
+            </BrowserRouter>
+        </MainStyled>
+    );
 }
 
 export default Main;

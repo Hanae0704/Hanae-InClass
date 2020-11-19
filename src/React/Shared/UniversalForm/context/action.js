@@ -50,11 +50,15 @@ export const handleOnSubmit = (state, dispatch) => {
 
     // validate from data
     let errors = false;
+    let postData = {};
+
     formData.forEach((field) => {
         if (field.required && field.value.length < 1) {
             errors = true;
             dispatch(feedbackMessageUpdate(`The ${field.id} is required.`));
         }
+
+        postData[field.id] = field.value
     });
 
     // if invalid, update error message
@@ -63,7 +67,7 @@ export const handleOnSubmit = (state, dispatch) => {
         dispatch(statusUpdate('error'));
     }
     else {
-        API.post(apiEndpoint, formData).then((apiResponse) => {
+        API.post(apiEndpoint, postData).then((apiResponse) => {
 
             dispatch(feedbackMessageUpdate('You passed our validation'));
             dispatch(statusUpdate('success'));

@@ -167,6 +167,17 @@ const essays = [
             )
         }
     },
+    {
+        title: '12',
+        question: 'In React, what is a controlled input?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Controlled input is an input that gets its value from a single source of truth, which we cannot change or update the element.</p>
+            </div>
+            )
+        }
+    },
     
 ]
 

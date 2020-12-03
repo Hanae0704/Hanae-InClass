@@ -161,7 +161,7 @@ const essays = [
         AnswerComponent: () => {
             return (
             <div>
-            <p>JavaScript destructuring remove properties from objects and bind them to variables.</p>
+            <p>JavaScript destructuring remove properties/values from objects and bind them to variables.</p>
             <p>This can also remove multiple properties in one statement.</p>
             </div>
             )
@@ -174,6 +174,32 @@ const essays = [
             return (
             <div>
             <p>Controlled input is an input that gets its value from a single source of truth, which we cannot change or update the element.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '13',
+        question: 'Which is more important, Server-Side or Client-Side validation and why?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Server-side validation takes whatever is sent by the clients/users and does addition checks. </p>
+            <p>However, Client-side validation does not require a round trip to the server, and clients/users perform the validation in their browser. </p>
+            <p>So, it is better to validate user input on Server Side because it can protect from computer virus or malicious users.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '14',
+        question: 'In React components, what are life cycle methods?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Components are created, grow by updating, and then die which are referred to as a component lifecycle.  </p>
+            <p>It is categorized in three: creating is Mounting, growing is Updating and dying is Unmounting.  </p>
+            <p>The render() is the most used lifecycle method, and It is a pure function.</p>
             </div>
             )
         }

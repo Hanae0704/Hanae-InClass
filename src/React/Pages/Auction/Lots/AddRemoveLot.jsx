@@ -12,13 +12,12 @@ const AddRemoveLot = ({lot}) => {
 
     const dispatch = useDispatch();
 
-    const { bidManager: { bids }, user } = useSelector((state) => state);
+    const { bidManager: { current: { bids } }, user } = useSelector((state) => state);
 
-    const isInBids = bids.find((bid) => {
+    const isInBids = bids && bids.find((bid) => {
         return bid.lot.id === lot.id;
     });
 
-    console.log('AddRemoveLot isInBids', isInBids);
 
     const handleOnClick = () =>  {
         console.log('Add Lot');

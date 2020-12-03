@@ -1,16 +1,22 @@
 import { ActionTypes } from './actionTypes.js';
 
 const defaultState = {
-    bids: [],
+    current: {},
+    past: [],
 }
 
 const bidManagerReducer = (state = defaultState, action) => {
 
     switch(action.type) {
-        case ActionTypes.BM_BIDS_UPDATE: 
+        case ActionTypes.BM_CURRENT_UPDATE: 
         return {
             ...state,
-            bids: action.bids,
+            current: action.current,
+        }
+        case ActionTypes.BM_PAST_UPDATE: 
+        return {
+            ...state,
+            past: action.past,
         }
         default:
             return state;

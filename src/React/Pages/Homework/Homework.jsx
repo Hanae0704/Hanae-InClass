@@ -204,6 +204,19 @@ const essays = [
             )
         }
     },
+    {
+        title: '15',
+        question: 'In JavaScript, what is a Fat Arrow function? Are there other types of Functions?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>Arrow functions, also called fat arrow functions are for writing function expressions. </p>
+            <p>They utilize a new token, =>, that looks like a fat arrow. </p>
+            <p>By using arrow functions, we avoid having to type the function keyword, return keyword (it’s implicit in arrow functions), and curly brackets.</p>
+            </div>
+            )
+        }
+    },
     
 ]
 

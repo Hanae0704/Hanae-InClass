@@ -217,6 +217,31 @@ const essays = [
             )
         }
     },
+    {
+        title: '16',
+        question: 'In JavaScript, what is a ternary operator?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>A ternary operator allows you to assign one value to the variable if the condition is true.</p>
+            <p>It uses three operands and provides a way to shorten a simple if-else statement using (?) question mark or (:) colon.</p>
+            </div>
+            )
+        }
+    },
+    {
+        title: '17',
+        question: 'What is the difference between SQL and NoSQL databases? What are the advantages and disadvantages of each?',
+        AnswerComponent: () => {
+            return (
+            <div>
+            <p>SQL databases are relational, NoSQL are non-relational.</p>
+            <p>SQL programming can be used to insert, search, update, delete database records.</p>
+            <p>NoSQL does not require a fixed schema, avoids joins, and is easy to scale, that can used for Big data and real-time web apps.</p>
+            </div>
+            )
+        }
+    },
     
 ]
 
